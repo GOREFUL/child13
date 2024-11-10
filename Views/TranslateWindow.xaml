@@ -1,0 +1,35 @@
+﻿<Window x:Class="child13.Views.TranslateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:child13.Views"
+        mc:Ignorable="d"
+                Title="TranslateWindow"
+        WindowStyle="None" 
+        AllowsTransparency="True"
+        Background="Transparent"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        MinWidth="450" MinHeight="130"
+        Width="450" Height="130">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resources/Styles/LanguageButtonStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btn_Ukr" Grid.Column="0" Style="{StaticResource LanguageButtonStyle}" Content="Ukrainian" Click="Button_Ukr_Click" />
+        <Button x:Name="btn_Rus" Grid.Column="1" Style="{StaticResource LanguageButtonStyle}" Content="Russian" Click="Button_Rus_Click" />
+        <Button x:Name="btn_Pol" Grid.Column="2" Style="{StaticResource LanguageButtonStyle}" Content="Polish" Click="Button_Pol_Click"/>
+    </Grid>
+</Window>
+
